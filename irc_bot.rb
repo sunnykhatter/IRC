@@ -1,11 +1,13 @@
 require "socket"
+require_relative "wikibot"
+#require_relative "tictactoe_runner.rb"
 
 server = "chat.freenode.net"
 port = "6667"
-nick = "Sunny_IRC_robot"
+nick = "wikibot"
 channel = "#LakshayTest"
 greeting_prefix = "PRIVMSG #LakshayTest :"
-greetings = ["Hello", "Play TicTacToe"]
+greetings = ["Hello"]
 s = TCPSocket.open(server, port)
 print("addr: ", s.addr.join(":"), "\n")
 print("peer: ", s.peeraddr.join(":"), "\n")
@@ -32,9 +34,11 @@ end
 
 if msg.include? greeting_prefix and wasGreeted
 	response = "Game On!"
+	
 
+	s.puts "PRIVMSG #{channel} :#{board} "
 	s.puts "PRIVMSG #{channel} :#{response}"
-
+	s.puts "PRIVMSG "
 end
 
 

@@ -10,7 +10,7 @@ attr_accessor :board, :turn, :player
 	end
 
 	def drawboard()
-		board  =  "1 | 2 | 3\n_________\n4 | 5 | 6\n_________\n7 | 8 | 9"
+		board  =  "1 | 2 | 3 \n _________\n4 | 5 | 6\n_________\n7 | 8 | 9"
 	end
 
 	def alreadytaken(number)
