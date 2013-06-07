@@ -33,7 +33,7 @@ wasGreeted = true if msg.include? g
 end
 
 if msg.include? greeting_prefix and wasGreeted
-	response = "Game On!"
+	response = "ask me Anything!"
 	
 
 	s.puts "PRIVMSG #{channel} :#{board} "
