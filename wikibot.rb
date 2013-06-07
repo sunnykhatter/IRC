@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 
 
-
+class Wikibot
 
 def searchWiki(searchterm)
 
@@ -19,8 +19,8 @@ wikidata = data.css('.mw-content-ltr')
 		#puts "#{title} #{data}"
 		#toc = data.at_css('.toc').text
 		#basicstats.delete("\n")
-		output = basicstats.tr("\n", ' ')
-		puts "#{output}"
+		output = basicstats.tr("\n", '-')
+		return "#{output}"
 
 		#puts "#{basicstats.gsub}"
 		#basicstats.gsub(/[\n\n]/, '\n')
@@ -33,6 +33,6 @@ wikidata = data.css('.mw-content-ltr')
 
 	end
 
-
-
+end
+#searchWiki("cars")
 		
